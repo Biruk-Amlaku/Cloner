@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" spacing="5.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.clonerController">
+    <children>
+      <VBox>
+         <children>
+            <HBox>
+               <children>
+                  <TextField disable="true" editable="false" prefHeight="26.0" prefWidth="42.0" text="URL" HBox.hgrow="NEVER">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin></TextField>
+                  <TextField fx:id="urlTextField" prefHeight="26.0" prefWidth="505.0" promptText="&lt;https://&gt;www.example.com" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+            <Label id="urlErrorLabel" fx:id="urlErrorLabel" text="Correct url" textFill="#f80606" visible="false">
+               <font>
+                  <Font size="11.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </VBox>
+        <HBox prefHeight="35.0" prefWidth="600.0" spacing="10.0">
+            <children>
+                <Label text="Clone Depth" />
+                <Spinner fx:id="depthSpinner" prefHeight="26.0" prefWidth="111.0" />
+            </children>
+            <padding>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </padding>
+        </HBox>
+        <HBox prefHeight="35.0" prefWidth="600.0" spacing="10.0">
+            <children>
+                <CheckBox fx:id="cloneOutsideDomainCheckBox" mnemonicParsing="false" text="Clone Outside Domain" />
+            <CheckBox fx:id="downloadExternalResourcesCheckBox" layoutX="15.0" layoutY="15.0" mnemonicParsing="false" selected="true" text="Download External Resources" />
+            </children>
+            <padding>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </padding>
+        </HBox>
+        <Button fx:id="startCloningButton" defaultButton="true" mnemonicParsing="false" onAction="#startCloningButtonHandler" prefHeight="45.0" prefWidth="122.0" text="Start Cloning" VBox.vgrow="ALWAYS" />
+        <ProgressIndicator fx:id="progressIndicator" prefHeight="80.0" progress="0.0" />
+    </children>
+</VBox>
