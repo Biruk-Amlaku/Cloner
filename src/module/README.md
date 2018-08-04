@@ -1,1 +1,1 @@
-
+** The ResourceDownloader class should be adjusted with the crawler logic as we talked, since it contains code for saving it a recursive path derived from the path of the url it was given. That was changed to a more flat folder structure, so this portion of the code should be ported to the main crawler logic. **
